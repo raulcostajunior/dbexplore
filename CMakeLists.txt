@@ -9,4 +9,4 @@ set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -pthread")
 
 add_subdirectory(tvision)
 
-add_subdirectory(src)
+add_subdirectory(src ${CMAKE_BINARY_DIR}/exploredb)
