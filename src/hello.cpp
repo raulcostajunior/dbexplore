@@ -48,7 +48,7 @@ THelloApp::THelloApp()
 void THelloApp::greetingBox() {
     TDialog *d = new TDialog(TRect(25, 5, 55, 16), "Hello, World!");
 
-    d->insert(new TStaticText(TRect(3, 5, 15, 6), "How are you?"));
+    d->insert(new TStaticText(TRect(3, 5, 15, 6), "Wie bist du?"));
     d->insert(new TButton(TRect(16, 2, 28, 4), "Terrific", cmCancel, bfNormal));
     d->insert(new TButton(TRect(16, 4, 28, 6), "Ok", cmCancel, bfNormal));
     d->insert(new TButton(TRect(16, 6, 28, 8), "Lousy", cmCancel, bfNormal));
