@@ -52,3 +52,12 @@ build_release/
 
 # clangd specific
 .clangd/
+.clang-format/
+.clang-tidy/
+
+# IntelliJ based IDEs
+.idea/*
+
+# MacOS specific
+.DS_Store 
+
