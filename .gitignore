@@ -46,7 +46,8 @@ build/
 build_debug/
 build_release/
 
-# VSCode specific settings
+# IDE specific settings
+.idea
 .vscode
 
 # clangd specific
