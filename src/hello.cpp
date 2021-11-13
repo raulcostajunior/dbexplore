@@ -39,6 +39,7 @@ class THelloApp : public TApplication {
 
    private:
     void greetingBox();
+    void openBox();
 };
 
 THelloApp::THelloApp()
@@ -58,12 +59,22 @@ void THelloApp::greetingBox() {
     destroy(d);
 }
 
+void THelloApp::openBox() {
+    TDialog *od = new TDialog(TRect(20, 10, 65, 20), "Öffnen Etwas");
+    deskTop->execView(od);
+    destroy(od);
+}
+
 void THelloApp::handleEvent(TEvent &event) {
     TApplication::handleEvent(event);
     if (event.what == evCommand) {
         switch (event.message.command) {
             case GreetThemCmd:
                 greetingBox();
+                clearEvent(event);
+                break;
+            case cmOpen:
+                openBox();
                 clearEvent(event);
                 break;
             default:
@@ -78,8 +89,9 @@ TMenuBar *THelloApp::initMenuBar(TRect r) {
     return new TMenuBar(
         r, *new TSubMenu("~H~ello", kbAltH) +
                *new TMenuItem("~G~reeting...", GreetThemCmd, kbAltG) +
+               *new TMenuItem("O~p~en", cmOpen, kbF3, hcNoContext, "F3") +
                newLine() +
-               *new TMenuItem("E~x~it", cmQuit, cmQuit, hcNoContext, "Alt-X"));
+               *new TMenuItem("E~x~it", cmQuit, kbAltX, hcNoContext, "Alt-X"));
 }
 
 TStatusLine *THelloApp::initStatusLine(TRect r) {
