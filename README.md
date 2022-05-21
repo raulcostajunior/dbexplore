@@ -4,13 +4,13 @@ A multi-database explorer with a text mode UI. Based on [TVision](https://github
 # Building and Running
 
 
-## Install the build requirements: a C++ toolchain, `cmake` and `ncursesw`:
+## Install the build requirements: a C++ toolchain, `cmake` and `ncurses(w)`:
 
 ### On macOS:
 
 If XCode isn't already installed, a lighter option for the C++ toolchain is the XCode Command Line Tools package from Apple. For more details on the XCode Command Line Tools and their installation, take a [look in here](https://www.freecodecamp.org/news/install-xcode-command-line-tools/).
 
-`cmake` and `ncursesw` installation instructions assume that `brew` is already installed. Information on `brew` and its installation can be found on [its site](https://brew.sh/). 
+`cmake` and `ncurses` installation instructions assume that `brew` is already installed. Information on `brew` and its installation can be found on [its site](https://brew.sh/). 
 
 ```sh
 xcode-select --install
